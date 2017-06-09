@@ -1,0 +1,16 @@
+{
+  "name": "fbbot-tutorial",
+  "version": "1.0.0",
+  "description": "Original Tutorial from https://github.com/jw84/messenger-bot-tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}

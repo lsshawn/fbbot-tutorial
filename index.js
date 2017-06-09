@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
 
-const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN
+const token = process.env.FB_VERIFY_TOKEN
 const FB_PAGE_TOKEN = process.env.FB_PAGE_TOKEN
 const WIT_TOKEN = process.env.WIT_TOKEN
 
@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 // for Facebook verification
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
-      req.query['hub.verify_token'] === FB_VERIFY_TOKEN) {
+      req.query['hub.verify_token'] === token) {
     console.log("Validating webhook");
     res.status(200).send(req.query['hub.challenge']);
   } else {
